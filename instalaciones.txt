@@ -1,0 +1,33 @@
+//trabajare con google chrome por que es en navegador mas usado
+google chrome: https://www.google.com/chrome/
+
+//extensiones de chrome
+react developer tools: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es&authuser=1
+redux devtools : https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es
+
+//programas: mongo y postman estan con mi cuenta
+postman: https://www.postman.com/downloads/
+mongo compass: https://www.mongodb.com/try/download/compass
+git: https://git-scm.com/
+//instalar todas las herramientas
+node: https://nodejs.org/es/
+visual studio code: https://code.visualstudio.com/
+
+//extensiones de vs code
+https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
+https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-monokai-night
+https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets
+https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
+
+//crear el proyecto de react
+npx create-react-app proyecto
+
+//instalaciones que se iran haciendo desde el propio terminal de vs code
+npm install react-router-dom
+npm i moment
+
+//esta es la pagina en la que me decante para inspirarme: https://jquense.github.io/react-big-calendar/examples/index.html
+//y como pedia tambien el uso de una api pues usare esta api, que no es mas que la parte "visual" del enlace anterior, aqui me guie para instalarlo todo https://github.com/jquense/react-big-calendar#readme
+npm i react-big-calendar
