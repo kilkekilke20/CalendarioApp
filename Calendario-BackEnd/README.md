@@ -22,3 +22,5 @@ npm i bcryptjs
 npm i jsonwebtoken
 # instalar cors (https://www.npmjs.com/package/cors), es una api que sirve para que una vez desplegada la pagina cualquier persona pueda hacer peticiones a la pagina (me gustaria intentar subir la pagina y que otra persona se pueda conectar, lo dejare instalado y haciendo la llamada en el index y ya, mas adelante vere si puedo hacerlo)
 npm i cors
+# instalar moment
+npm i moment

@@ -18,7 +18,7 @@ const validarJWT = (req, res=response, next) => {
     }
 
     try {
-        
+        // en  process.env.SECRET_JWT_SEED llamo a la semilla del JWT en el .env
         const {uid, name} = JWT.verify(
             token,
             process.env.SECRET_JWT_SEED
