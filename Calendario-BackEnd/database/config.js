@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //conectarse a la base de datos
-const dbConnection = async() => {
+const dbConnection = async () => {
 
     try {
         //en la ultima version de mongoose solo hace falta la direccion
@@ -11,7 +11,7 @@ const dbConnection = async() => {
 
     } catch (error) {
         console.log(error);
-         throw new Error('Error al iniciar la base de datos');
+        throw new Error('Error al iniciar la base de datos');
     }
 
 }

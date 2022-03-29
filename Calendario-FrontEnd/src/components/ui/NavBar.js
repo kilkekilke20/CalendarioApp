@@ -1,31 +1,85 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { startLogout } from '../../actions/auth';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { ModoOscuroClaro } from '../../helpers/ModoOscuroClaro';
+import { DropDownPerfil } from './DropDownPerfil';
+import { SalirBotton } from './SalirBotton';
 
 export const NavBar = () => {
 
-  const dispatch = useDispatch();
   const { name } = useSelector(state => state.auth);
+  const usuario = localStorage.getItem('firebase');
+  //cambiar el link segun si la sesion esta iniciada o no
+  const ConditionalLink = ({ to, condition }) => (!!condition && to)
+    ? <Link className='btn btn-primary col-10 m-1 ' to="/Calendario">Calendario</Link>
+    : <><Link className='btn btn-primary col-10 m-1 ' to="/PaginaPrincipal/login">Login</Link></>
+    ;
 
-  //llamo a la funcion startlogout
-  const handleLogout = () => {
-    dispatch(startLogout());
+  //Mostrar desplegable del perfil
+  const MostrarPerfil = () => {
+    return (
+      <OcultarGoogleDesplegable />
+    )
+  }
+
+  //Ocultar desplegable del perfil
+  const OcultarPerfil = () => {
+    return (
+      <></>
+    )
+  }
+
+  //ocultar desplegable si es una cuenta de google
+  const OcultarGoogleDesplegable = () => {
+    if (usuario) {
+      return (
+        <SalirBotton />
+      )
+    } else {
+      return (
+        <DropDownPerfil />
+      )
+    }
+  }
+
+  //Mostrar o Ocultar desplegable del perfil si la sesion esta iniciada o no
+  const MostrarOcultarPerfil = () => {
+    if (name !== undefined) {
+      return (
+        <MostrarPerfil />
+      );
+    } else {
+      return (
+        <OcultarPerfil />
+      )
+    };
   }
 
   return (
-    <div className="navbar navbar-dark bg-dark mb-4">
-      <span className='navbar-brand'>
-        CalendarioApp, organiza tus proyectos con tus compañeros, Bienvenido {name}
-      </span>
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
 
-      <button
-        className='btn btn-outline-danger'
-        onClick={handleLogout}
-      >
-        <i className='fas fa-sign-out-alt'></i>
-        <span> SALIR</span>
-      </button>
+      <div className="navbar-collapse">
+        <ModoOscuroClaro />
+        <div className="navbar-nav">
 
-    </div>
+          <Link
+            className='btn btn-primary col-10 m-1 '
+            to="/PaginaPrincipal"
+          >
+            Pagina Principal
+          </Link>
+
+          <ConditionalLink
+            to="/PaginaPrincipal/login"
+            condition={name !== undefined}
+          >
+            Login
+          </ConditionalLink>
+
+        </div>
+      </div>
+
+      <MostrarOcultarPerfil />
+    </nav>
   )
 }

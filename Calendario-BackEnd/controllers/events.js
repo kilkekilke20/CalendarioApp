@@ -4,19 +4,18 @@ const Evento = require('../models/Evento')
 /*
     Events Routes
     /api/events
-*/ 
+*/
 
 // listado de todos los eventos
 const getEventos = async (req, res) => {
 
     //mustra los datos de los eventos, y como solo sale el user la id con populate eliges que mas mostrar, en mi caso el nombre, ya que esto se mostrara en el front
-    const eventos = await Evento.find().populate('user','name');
+    const eventos = await Evento.find().populate('user', 'name');
 
     res.json({
         ok: true,
         eventos
     })
-
 }
 
 // crear evento
@@ -34,21 +33,22 @@ const crearEvento = async (req, res) => {
         const GuardarEvento = await evento.save();
 
         res.json({
-            ok:true,
-            evento:GuardarEvento
+            ok: true,
+            evento: GuardarEvento
         })
-        
+
     } catch (error) {
         console.log(error);
         res.status(500).json({
             ok: false,
             msg: 'UPS algo ha salido mal'
         })
-        
+
     }
 
 }
 
+//actualizar
 const actualizarEvento = async (req, res) => {
 
     //recoger el id
@@ -56,7 +56,7 @@ const actualizarEvento = async (req, res) => {
     const uid = req.uid;
 
     try {
-        
+
         //verificar si el vento existe
         const evento = await Evento.findById(eventoId);
 
@@ -69,7 +69,7 @@ const actualizarEvento = async (req, res) => {
         }
 
         // si el usuario es diferente al uid, basicamente una persona intentando editar el evento de otra
-        if ( evento.user.toString() !== uid ) {
+        if (evento.user.toString() !== uid) {
 
             return res.status(401).json({
                 ok: false,
@@ -88,7 +88,7 @@ const actualizarEvento = async (req, res) => {
 
         //actualizar el evento
         //findByIdAndUpdate(id del evento a actualizar, los datos nuevos, evento con los datos que acabo de introducir(si no me envia los anteriores))
-        const eventoActualizado = await Evento.findByIdAndUpdate( eventoId, nuevoEvento, {new: true});
+        const eventoActualizado = await Evento.findByIdAndUpdate(eventoId, nuevoEvento, { new: true });
 
         res.json({
             ok: true,
@@ -114,7 +114,7 @@ const eliminarEvento = async (req, res) => {
     const uid = req.uid;
 
     try {
-        
+
         //verificar si el vento existe
         const evento = await Evento.findById(eventoId);
 
@@ -127,7 +127,7 @@ const eliminarEvento = async (req, res) => {
         }
 
         // si el usuario es diferente al uid, basicamente una persona intentando editar el evento de otra
-        if ( evento.user.toString() !== uid ) {
+        if (evento.user.toString() !== uid) {
 
             return res.status(401).json({
                 ok: false,
@@ -138,7 +138,7 @@ const eliminarEvento = async (req, res) => {
 
         //actualizar el evento
         //findByIdAndDelete(id elemento a borrar)
-        await Evento.findByIdAndDelete( eventoId );
+        await Evento.findByIdAndDelete(eventoId);
 
         res.json({
             ok: true

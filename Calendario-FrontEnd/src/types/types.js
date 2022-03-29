@@ -22,4 +22,8 @@ export const types = {
     authStartStartTokenRenew: '[auth] Start token renew',
     authLogin: '[auth] Login',
     authLogout: '[auth] Logout',
+    userLoaded: '[auth] User Loaded',
+
+    //perfil
+    eventUpdatedProfile: '[auth] Profile updated',
 }

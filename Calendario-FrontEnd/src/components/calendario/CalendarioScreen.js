@@ -18,7 +18,6 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'moment/locale/es';
 import { AddNewFab } from '../ui/AddNewFab';
 import { DeleteEventFab } from '../ui/DeleteEventFab';
-import { types } from '../../types/types';
 
 
 
@@ -40,8 +39,6 @@ export const CalendarioScreen = () => {
 
   const { uid } = useSelector(state => state.auth);
 
-
-
   //es la continuacion del onViewChange, pero aqui recoges el valor 
   const [lastView, setLastView] = useState(localStorage.getItem('lastView') || 'month');
 
@@ -56,15 +53,6 @@ export const CalendarioScreen = () => {
   const onDoubleClick = (e) => {
     // console.log(e);
     dispatch(uiOpenModal());
-
-    /*
-    dispatch(eventSetActive(e));
-    dispatch(
-      {
-        type: types.uiOpenModal,
-        payload: true
-      }
-    );*/
 
   }
 
@@ -86,8 +74,6 @@ export const CalendarioScreen = () => {
   }
 
   const eventStyleGetter = (event, start, end, isSelected) => {
-
-    
 
     const style = {
       //un condicional, lo que hace es si una persona esta en el calendarioScreen, los eventos creados por el aparecera de un color, y los que no de otro

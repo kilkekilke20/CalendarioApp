@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Navigate
+  Route
 } from "react-router-dom";
 import { startChecking } from '../actions/auth';
 import { LoginScreen } from '../components/auth/LoginScreen';
-import { CalendarioScreen } from '../components/calendario/CalendarioScreen';
+import { PaginaPrincipalScreen } from '../components/PaginaPrincipal/PaginaPrincipalScreen';
+import { DashboardPrivateRoutes } from './DashboardPrivateRoutes';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
@@ -38,24 +38,27 @@ export const AppRouter = () => {
   //aqui defino las rutas publicas y privadas, he tenido bastantes problemas con los redirects por lo que puede ser un caos :v
   // si el usuario esta autentificado (checking = false) lo redirijira al calendario, no le dejara volver al login hasta que cierre sesion
   // si no lo esta pues solo puede acceder al login
+
+
   return (
     <Router>
       <div>
         <Routes>
-          <Route exact path='/login' element={ 
-              <PublicRoute uid={ !!uid} >
-                <LoginScreen/> 
-              </PublicRoute>
-            } 
+          <Route path="/PaginaPrincipal" element={<PaginaPrincipalScreen />} />
+          <Route exact path='/PaginaPrincipal/login' element={
+            <PublicRoute uid={!!uid} >
+              <LoginScreen />
+            </PublicRoute>
+          }
           />
-          <Route exact path='/*' 
-            element={ 
+
+          <Route exact path='/*'
+            element={
               <PrivateRoute uid={!!uid}>
-                <CalendarioScreen />
-              </PrivateRoute> 
-            }  
+                <DashboardPrivateRoutes />
+              </PrivateRoute>
+            }
           />
-          
         </Routes>
       </div>
     </Router>

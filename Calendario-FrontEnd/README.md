@@ -15,7 +15,7 @@ git: https://git-scm.com/
 node: https://nodejs.org/es/
 visual studio code: https://code.visualstudio.com/
 
-# extensiones de vs code usadas, lo recomiendo ya que sera mas comodo leer el codigo
+# extensiones de vs code usadas, lo recomiendo ya que sera mas comodo leer el codigos
 https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
 https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-monokai-night
 https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
@@ -43,9 +43,13 @@ npm i redux-thunk
 # y como pedia tambien el uso de una api pues usare esta api, que no es mas que la parte "visual" del enlace anterior, aqui me guie para instalarlo todo https://github.com/jquense/react-big-calendar#readme
 npm i react-big-calendar
 
-# enviar correos al iniciar sesion o hacer un formulario (https://www.npmjs.com/package/emailjs)
-npm install emailjs
+# enviar correos al iniciar sesion o hacer un formulario (https://nodemailer.com/about/)
+npm install nodemailer
 
+#
+# npm install react-bootstrap bootstrap
+# instalar firebase
+npm install firebase
 #---------------------------
 # Lo siguiente lo crea el propio react cuando creas el proyecto, es un manual de los comandos, el principal que se usa es el `npm start` para lanzar la app
 

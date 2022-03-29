@@ -1,10 +1,10 @@
-import React from 'react'
 import { types } from '../types/types';
 
 const initialState = {
   checking: true,
   //uid: null,
   //name: null
+  
 }
 
 
@@ -30,6 +30,12 @@ export const authReducer = (state = initialState, action) => {
     case types.authLogout:
       return {
         checking: false
+      }
+    //cargar o mostrar el usuario en el perfil
+    case types.userLoaded:
+      return {
+        ...state,
+        body: [...action.payload]
       }
     default:
       return state;

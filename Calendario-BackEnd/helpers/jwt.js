@@ -3,9 +3,9 @@ const JWT = require('jsonwebtoken');
 const generarJWT = (uid, name) => {
 
 
-    return new Promise((resolve,reject) => {
+    return new Promise((resolve, reject) => {
 
-        const payload = {uid, name};
+        const payload = { uid, name };
 
         //generar token
         //argumento 1:payload
@@ -18,7 +18,7 @@ const generarJWT = (uid, name) => {
         }, (err, token) => {
 
             //si no se pudo generar el token se muestra el error
-            if (err){
+            if (err) {
                 console.log(err);
                 reject('No se pudo generar el token')
             }

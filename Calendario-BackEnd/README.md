@@ -24,3 +24,6 @@ npm i jsonwebtoken
 npm i cors
 # instalar moment
 npm i moment
+
+# instalar un middleware de excepciones (https://www.npmjs.com/package/express-async-handler)
+npm i express-async-handler

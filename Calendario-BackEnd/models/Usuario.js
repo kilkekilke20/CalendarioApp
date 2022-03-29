@@ -1,5 +1,5 @@
 //aqui seguire la guia de mongoose
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 //la tabla de usuario(una vez que se lanza mongodb crea la tabla automaticamente)
 const UsuarioSchema = Schema({

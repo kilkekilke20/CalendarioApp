@@ -135,14 +135,6 @@ export const CalendarioModal = () => {
             //crear uno nuevo
             //realizar el guardado del formulario
             dispatch(eventStartAddNew(formValues));
-            /*dispatch(eventStartAddNew({
-                ...formValues,
-                id: new Date().getTime(),
-                user: {
-                    _id: '123',
-                    name: 'kilian'
-                }
-            }));*/
         }
 
 
@@ -168,6 +160,7 @@ export const CalendarioModal = () => {
 
         //lo siguiente es el formulario para la hora, fecha, titulo etc... solo es html
         >
+            <div className='TemaOscuroClaro'>
             <h1> {(activeEvent) ? 'Editar Evento' : 'Nuevo evento'} </h1>
             <hr />
             <form
@@ -233,6 +226,7 @@ export const CalendarioModal = () => {
                 </button>
 
             </form>
+            </div>
         </Modal>
     )
 }

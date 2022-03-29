@@ -95,6 +95,7 @@ export const eventStartDelete = (event) => {
 
             if (body.ok) {
                 dispatch(eventDeleted(event));
+                return Swal.fire('Eliminado!', 'El evento se ha eliminado', 'success');
             } else {
                 Swal.fire('Error',body.msg, 'error');
             }

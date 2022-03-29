@@ -1,18 +1,18 @@
 const moment = require('moment')
 
 //validar la fecha
-const isDate = ( value ) => {
+const isDate = (value) => {
 
     //verificar si el value existe
-    if( !value ) {
+    if (!value) {
         return false
     }
 
     //le mando los valores a moment y el se encarga de decirme si es una fecha correcta
-    const fecha = moment( value );
-    if (fecha.isValid()){
+    const fecha = moment(value);
+    if (fecha.isValid()) {
         return true;
-    }else {
+    } else {
         return false;
     }
 }
