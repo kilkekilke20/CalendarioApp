@@ -10,7 +10,7 @@ html[data-theme="dark"] {
   --secondary-color: #282c34;
 }
 
-.TemaOscuroClaro, .card-body, .modal, .login-form-1 h3, body {
+.TemaOscuroClaro, .card-body, .modal, .login-form-1 h3, body,#about {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 

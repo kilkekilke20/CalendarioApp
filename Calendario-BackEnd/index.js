@@ -23,7 +23,6 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
-
 // escuchar peticiones, no poner el puerto 3000 porque ese es del react
 app.listen( process.env.PORT, () => {
     console.log(`Servidor en ${process.env.PORT}`);

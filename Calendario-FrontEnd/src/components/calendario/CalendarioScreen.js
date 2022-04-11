@@ -51,9 +51,7 @@ export const CalendarioScreen = () => {
 
   //cuando se hace doble click en un evento, aparece la informacion, lo usare para editarlo
   const onDoubleClick = (e) => {
-    // console.log(e);
     dispatch(uiOpenModal());
-
   }
 
   //cuando se hace click en un evento, lo usare para seleccionarlo
@@ -69,7 +67,6 @@ export const CalendarioScreen = () => {
   }
 
   const onSelectSlot = (e) => {
-    // console.log(e)
     dispatch(eventClearActiveEvent());
   }
 

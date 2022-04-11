@@ -15,7 +15,7 @@ git: https://git-scm.com/
 node: https://nodejs.org/es/
 visual studio code: https://code.visualstudio.com/
 
-# extensiones de vs code usadas, lo recomiendo ya que sera mas comodo leer el codigos
+# extensiones de vs code usadas, lo recomiendo ya que sera mas comodo leer el codigo
 https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
 https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-monokai-night
 https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme

@@ -1,18 +1,6 @@
 import { types } from '../types/types';
-/*
-{
-    //esto lo usare como referencia para saber que mostrar
-    id: 'new Date().getTime()',
-    title: 'estoy currando',
-    start: moment().toDate(),// es lo mismo que usar new Date() pero con moment
-    end: moment().add(2, 'hours').toDate(),
-    user: {
-        _id: '123',
-        name: 'kilian'
-    }
-}
-*/
-//esto es temporal, mas adelante se cambiara y se leera directamente desde la base de datos
+
+//estado inicial de los eventos del calendario
 const initialState = {
     //eventos del calendaririo
     events: [],
