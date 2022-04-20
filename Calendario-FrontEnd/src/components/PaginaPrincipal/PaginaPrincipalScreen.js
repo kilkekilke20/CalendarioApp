@@ -25,7 +25,7 @@ export const PaginaPrincipalScreen = () => {
           <div class="container" data-aos="fade-up">
             <div class="row about-container">
 
-              <div class="col-lg-6 content order-lg-1 order-2">
+              <div class="col-6 content order-1">
                 <h2 class="title">Acerca de la aplicación</h2>
                 <p>
                   Es una agenda desarrollada para permitir la organización de varias personas, permitiendo compartir eventos
@@ -53,7 +53,7 @@ export const PaginaPrincipalScreen = () => {
 
               </div>
 
-              <div class="col-lg-6 background order-lg-2 order-1 " data-aos="fade-left" data-aos-delay="100">
+              <div class="col-6 background order-2" data-aos="fade-left" data-aos-delay="100">
                 <img className="bd-placeholder-img card-img-top" 
                 width="100%" 
                 height="370" 
@@ -79,7 +79,7 @@ export const PaginaPrincipalScreen = () => {
               <p class="section-description">Nuestra App posee gran variedad de funcionalidades</p>
             </div>
             <div class="row">
-              <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+              <div class="col-4" data-aos="zoom-in">
                 <div class="box">
                   <div class="icon"><a ><i class="bi bi-briefcase"></i></a></div>
                   <h4 class="title"><a >Todos pueden ver tus eventos</a></h4>
@@ -87,14 +87,14 @@ export const PaginaPrincipalScreen = () => {
                     util para ambientes organizativos profesionales</p>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+              <div class="col-4" data-aos="zoom-in">
                 <div class="box">
                   <div class="icon"><a ><i class="bi bi-card-checklist"></i></a></div>
                   <h4 class="title"><a >Perfil Personalisable</a></h4>
                   <p class="description">Podrás cambiarte el email, contraseña y tu nombre en cualquier momento</p>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+              <div class="col-4" data-aos="zoom-in">
                 <div class="box">
                   <div class="icon"><a ><i class="bi bi-journal-check"></i></a></div>
                   <h4 class="title"><a >Cada evento es propio</a></h4>
@@ -103,21 +103,21 @@ export const PaginaPrincipalScreen = () => {
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+              <div class="col-4" data-aos="zoom-in">
                 <div class="box">
                   <div class="icon"><a ><i class="bi bi-shield-lock-fill"></i></a></div>
                   <h4 class="title"><a >Login seguro</a></h4>
                   <p class="description">Las cuentas de los usuarios estan encriptada en todo momento</p>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+              <div class="col-4" data-aos="zoom-in">
                 <div class="box">
                   <div class="icon"><a ><i class="bi bi-brightness-high"></i></a></div>
                   <h4 class="title"><a >Modo Oscuro</a></h4>
                   <p class="description">Poseemos modo oscuro y claro, según su preferencia</p>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+              <div class="col-4" data-aos="zoom-in">
                 <div class="box">
                   <div class="icon"><a ><i class="bi bi-calendar4-week"></i></a></div>
                   <h4 class="title"><a >Calendario</a></h4>
@@ -134,13 +134,13 @@ export const PaginaPrincipalScreen = () => {
         <section id="call-to-action">
           <div class="container">
             <div class="row" data-aos="zoom-in">
-              <div class="col-lg-9 text-center text-lg-start">
+              <div class="col-9 text-center text-start">
                 <h3 class="cta-title">Inicia sesion o registrate</h3>
                 <p class="cta-text">
                   Inicia sesion o registrate para empezar a usar nuestra App
                 </p>
               </div>
-              <div class="col-lg-3 cta-btn-container text-center">
+              <div class="col-3 cta-btn-container text-center">
                 <Link
                   className='cta-btn align-middle'
                   to="/PaginaPrincipal/login"
@@ -166,7 +166,7 @@ export const PaginaPrincipalScreen = () => {
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-              <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="col-4 portfolio-item">
                 <img src={require('../../img/IMGEventoError.PNG')} class="img-fluid" alt="Responsive" />
                 <div class="portfolio-info">
                   <h4>Seguridad</h4>
@@ -174,7 +174,7 @@ export const PaginaPrincipalScreen = () => {
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="col-4 portfolio-item">
                 <img src={require('../../img/IMGEventoUnaPersonaZonaHoraria.PNG')} class="img-fluid" alt="Responsive " />
                 <div class="portfolio-info">
                   <h4>Distinción</h4>
@@ -182,7 +182,7 @@ export const PaginaPrincipalScreen = () => {
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="col-4 portfolio-item">
                 <img src={require('../../img/IMGEventoAgenda.PNG')} class="img-fluid" alt="Responsive " />
                 <div class="portfolio-info">
                   <h4>Organizacion</h4>
@@ -190,7 +190,7 @@ export const PaginaPrincipalScreen = () => {
                 </div>
               </div>
               {/* ======= ======= */}
-              <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="col-4 portfolio-item">
                 <img src={require('../../img/IMGEventoCrear.PNG')} class="img-fluid" alt="Responsive " />
                 <div class="portfolio-info">
                   <h4>Creación</h4>
@@ -198,7 +198,7 @@ export const PaginaPrincipalScreen = () => {
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="col-4 portfolio-item">
                 <img src={require('../../img/IMGEventoEditar.PNG')} class="img-fluid" alt="Responsive " />
                 <div class="portfolio-info">
                   <h4>Editable</h4>
@@ -206,7 +206,7 @@ export const PaginaPrincipalScreen = () => {
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="col-4 portfolio-item">
                 <img src={require('../../img/IMGPerfil.PNG')} class="img-fluid" alt="Responsive " />
                 <div class="portfolio-info">
                   <h4>Personalizacion</h4>

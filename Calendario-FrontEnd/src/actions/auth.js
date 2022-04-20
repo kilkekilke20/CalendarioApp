@@ -85,7 +85,7 @@ const StartGoogleLogin = (user) => {
 }
 
 //registrarse
-export const startRegister = (user,email, password, name) => {
+export const startRegister = (email, password, name, user) => {
 
     //es esactamente igual que el login pero llamando a un argumento mas (name)
     return async (dispatch) => {
@@ -97,7 +97,11 @@ export const startRegister = (user,email, password, name) => {
         if (body.ok) {
             localStorage.setItem('token', body.token);
             localStorage.setItem('token-init-date', new Date().getTime());
+
+            if (user){
             localStorage.setItem('firebase', user.auth.currentUser.providerId);
+            }
+            
             dispatch(login({
                 uid: body.uid,
                 name: body.name

@@ -1,55 +1,6 @@
-# trabajare con google chrome por que es en navegador mas usado
-google chrome: https://www.google.com/chrome/
+# para mongo cree una direccion de correo electronico(email: kilianProyecto@gmail.com , contraseña: KilianProyectoCalendario)
+# para instalar los paquetes de node, metase en la carpeta de Calendario-FrontEnd e introduce npm install, si hay algun problema use npm audit fix
 
-# extensiones de chrome
-react developer tools: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es&authuser=1
-redux devtools : https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es
-
-# programas: mongo y postman estan con mi cuenta
-# para mongo y postman cree una direccion de correo electronico(email: kilianProyecto@gmail.com , contraseña: KilianProyectoCalendario)
-postman: https://www.postman.com/downloads/
-mongo compass: https://www.mongodb.com/try/download/compass
-git: https://git-scm.com/
-
-# en la instalacion de node poner la opcion instalar todas las herramientas
-node: https://nodejs.org/es/
-visual studio code: https://code.visualstudio.com/
-
-# extensiones de vs code usadas, lo recomiendo ya que sera mas comodo leer el codigo
-https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
-https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-monokai-night
-https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
-https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
-https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets
-https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
-
-# crear el proyecto de react
-npx create-react-app CalendarioApp
-
-# instalaciones que se iran haciendo desde el propio terminal de vscode, estos en principio no hace falta que se instalen, ya que se instalan en el node_modules
-npm install react-router-dom
-npm i moment
-npm i sweetalert2
-# enlace de la documentacion de modal: https://www.npmjs.com/package/react-modal
-npm i react-modal 
-# enlace de la documentacion del datetimepicker: https://www.npmjs.com/package/react-datetime-picker, lo usare para mostrar la fecha y hora del modal en CalendarioModal.js
-npm i react-datetime-picker
-# necesitamos redux (https://github.com/zalmoxisus/redux-devtools-extension) y thunk para manejar bien el model
-npm install react-redux
-# documentacion de thunk: https://www.npmjs.com/package/redux-thunk
-npm i redux-thunk
-
-# esta es la pagina en la que me decante para usarla como api: https://jquense.github.io/react-big-calendar/examples/index.html
-# y como pedia tambien el uso de una api pues usare esta api, que no es mas que la parte "visual" del enlace anterior, aqui me guie para instalarlo todo https://github.com/jquense/react-big-calendar#readme
-npm i react-big-calendar
-
-# enviar correos al iniciar sesion o hacer un formulario (https://nodemailer.com/about/)
-npm install nodemailer
-
-#
-# npm install react-bootstrap bootstrap
-# instalar firebase
-npm install firebase
 #---------------------------
 # Lo siguiente lo crea el propio react cuando creas el proyecto, es un manual de los comandos, el principal que se usa es el `npm start` para lanzar la app
 
