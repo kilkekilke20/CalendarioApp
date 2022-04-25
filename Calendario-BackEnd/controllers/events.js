@@ -1,11 +1,6 @@
 const { response } = require("express")
 const Evento = require('../models/Evento')
 
-/*
-    Events Routes
-    /api/events
-*/
-
 // listado de todos los eventos
 const getEventos = async (req, res) => {
 
